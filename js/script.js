@@ -37,7 +37,7 @@ function displayShow() {
         displayShow();
       });
     });
-
+    // ========= edit list ============
     for (let j = 0; j < edit_btn_arr.length; j++) {
       edit_btn_arr[j].addEventListener("click", function () {
         inp_box.value = list_arr[j];
@@ -46,9 +46,10 @@ function displayShow() {
         modify_index = j;
       });
     }
+    // ========= edit list ============
   }
 }
-
+// ============ modify list ==========
 modify_btn.addEventListener("click", () => {
   list_arr[modify_index] = inp_box.value;
   add_task_btn.style.display = "inline-block";
@@ -56,5 +57,6 @@ modify_btn.addEventListener("click", () => {
   displayShow();
   inp_box.value = ""
 });
+// ============ modify list ==========
 
 // =========== todo list ===========
